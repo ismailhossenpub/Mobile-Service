@@ -1,0 +1,21 @@
+/* .testimonials .container{
+    background-image: url(../../../images/Bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 150px;
+} */
+
+.testimonials{
+    position: relative;
+    background-image: url('../../../images/Bg1.jpg');
+    background-size: cover;
+}
+
+.testimonials .card{
+    border-color: transparent;
+}
+
+.testimonials .card .card-footer{
+    background: transparent;
+    border: 0;
+}
