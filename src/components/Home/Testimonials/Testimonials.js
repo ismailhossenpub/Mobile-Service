@@ -19,8 +19,8 @@ const Testimonials = () => {
                    <h5 className="text-primary text-uppercase">Reviews</h5>
                    <h1>What is Your Quote for Us</h1>
                </div>
-               <div className="d-flex justify-content-center">
-               <div className=" row mt-5">
+               <div className="d-flex justify-content-center w-100">
+               <div className=" row mt-5 w-100">
                     {
                         reviews.map(testimonial => <Testimonial key={testimonial._id} testimonial={testimonial} />)
                     }
