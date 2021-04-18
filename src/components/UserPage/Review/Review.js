@@ -19,7 +19,7 @@ const Review = () => {
         image: imageURL,
         from:data.from
       }
-      const url = `http://localhost:5500/addReview`;
+      const url = `https://lit-meadow-67847.herokuapp.com/addReview`;
   
       
       

@@ -19,7 +19,7 @@ const AddService = () => {
         image: imageURL,
         price:data.price
       }
-      const url = `http://localhost:5500/addService`;
+      const url = `https://lit-meadow-67847.herokuapp.com/addService`;
   
       
       

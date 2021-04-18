@@ -8,7 +8,7 @@ const AdminSidebar = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 console.log(loggedInUser.name);
   useEffect(()=>{
-    fetch('http://localhost:5500/isAdmin',{
+    fetch('https://lit-meadow-67847.herokuapp.com/isAdmin',{
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/json'

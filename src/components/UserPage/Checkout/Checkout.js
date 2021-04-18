@@ -30,7 +30,7 @@ const Checkout = () => {
         paymentId, 
         orderTime: new Date()}
 
-      fetch('http://localhost:5500/addOrder',{
+      fetch('https://lit-meadow-67847.herokuapp.com/addOrder',{
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/json'

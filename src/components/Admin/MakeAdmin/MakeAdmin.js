@@ -17,7 +17,7 @@ const MakeAdmin = () => {
         const bookData = {
           email:data.email
         }
-        fetch('http://localhost:5500/makeAdmin',{
+        fetch('https://lit-meadow-67847.herokuapp.com/makeAdmin',{
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/json'
