@@ -7,12 +7,12 @@ const ServicesDetail = ({service}) => {
         history.push(`/checkout/${serviceId}`);
     }
     return (
-        <div className="col-md-4 text-center">
-            <img style={{height:'50px'}} src={service.image} alt=""/>
-            <h5 className="mt-3 mb-3">{service.name}</h5>
+        <div className="col-md-4 text-center mt-5">
+            <img className="animate__zoomIn" style={{height:'50px'}} src={service.image}  alt=""/>
+            <h5 className="mt-3 mb-3 animate__zoomIn">{service.name}</h5>
             <p className="text-secondary">{service.description}</p>
             <h2>${service.price}</h2>
-            <button onClick={Checkout} className="btn btn-success">Buy Now</button>
+            <button onClick={()=>  Checkout(service._id)} className="btn btn-success">Buy Now</button>
         </div>
     );
 };

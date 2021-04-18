@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../../App';
 import Footer from '../../Share/Footer/Footer';
 import Header from '../Header/Header';
 import Project from '../Project/Project';
@@ -7,6 +8,8 @@ import Team from '../Team/Team';
 import Testimonials from '../Testimonials/Testimonials';
 
 const Home = () => {
+    const [loggedUser, setLoggedUser]= useContext(UserContext);
+    console.log(loggedUser);
     return (
         <div>
             <Header></Header>

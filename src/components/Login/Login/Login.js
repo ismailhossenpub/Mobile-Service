@@ -23,7 +23,7 @@ const Login = () => {
       .signInWithPopup(provider)
       .then(function (result) {
         const { displayName, email } = result.user;
-        const signedInUser = { name: displayName, email };
+        const signedInUser = { name: displayName, email: email };
         setLoggedInUser(signedInUser);
         storeAuthToken();
       })
@@ -45,7 +45,7 @@ const Login = () => {
         // Handle error
       });
   };
-
+console.log("Email=",loggedInUser.email);
   return (
     <div className="login-page container">
       <div className="row align-items-center" style={{ height: "100vh" }}>

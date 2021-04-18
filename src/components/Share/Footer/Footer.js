@@ -13,17 +13,17 @@ const Footer = () => {
     ]
     const Company = [
         {name: "About"},
-        {name: "Project" , link: "/Project"},
-        {name: "Our Team" , link: "/Our Team"},
-        {name: "Terms Condition" , link: "/Terms Condition"},
-        {name: "Submit Listing" , link: "/Submit Listing"},
+        {name: "Project" },
+        {name: "Our Team" },
+        {name: "Terms Condition"},
+        {name: "Submit Listing" },
     ]
     const QuickLinks = [
-        {name: "Quick Links" , link: "/emergency"},
-        {name: "Rentals" , link: "/checkup"},
-        {name: "Sales" , link: "/personal-treatment"},
-        {name: "Contact" , link: "/tooth-extract"},
-        {name: "Our Blog" , link: "/checkup"}
+        {name: "Quick Links"},
+        {name: "Rentals" },
+        {name: "Sales" },
+        {name: "Contact" },
+        {name: "Our Blog"}
     ]
     return (
         <footer className="footer-area clear-both ">

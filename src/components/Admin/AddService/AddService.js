@@ -59,19 +59,19 @@ const AddService = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
             <h1>Add a service</h1>
                     <div className="form-group mb-1">
-                        <label htmlFor="exampleInputEmail1">Service Title</label>
+                        <label htmlFor="exampleInputEmail1">Service Title</label><br/>
                         <input name="name" placeholder="Enter Title" ref={register} />
                     </div>
                     <div className="form-group mb-1">
-                        <label htmlFor="exampleInputPassword1">Description</label>
-                        <input name="description" placeholder="Enter service Description" ref={register} />
+                        <label htmlFor="exampleInputPassword1">Description</label> <br/>
+                        <textarea name="description" placeholder="Enter service Description" ref={register} />
                     </div>
                     <div className="form-group mb-1">
-                        <label htmlFor="exampleInputPassword1">Price</label>
+                        <label htmlFor="exampleInputPassword1">Price</label><br/>
                         <input name="price" placeholder="Enter service price" ref={register} />
                     </div>
                     <div className="form-group mb-2">
-                        <label htmlFor="exampleInputPassword1">Upload a image</label>
+                        <label htmlFor="exampleInputPassword1">Upload a image</label><br/>
                         <input name="exampleRequired" type="file"  onChange={handleImageUpload}  />
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>

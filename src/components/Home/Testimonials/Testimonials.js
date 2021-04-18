@@ -1,43 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Testimonial from '../Testimonial/Testimonial';
 import './Testimonials.css';
-import wilson from '../../../images/c4.jpg';
-import ema from '../../../images/c2.jpg';
-import robin from '../../../images/c3.webp';
 
-const testimonialData = [
-    {
-        quote : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-        name : 'Wilson Harry',
-        from : 'California',
-        img : wilson
-    },
-    {
-        quote : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-        name : 'Ema Gomez',
-        from : 'California',
-        img : ema
-    },
-    {
-        quote : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-        name : 'Aliza Farari',
-        from : 'California',
-        img : robin
-    }
-]
+
 
 const Testimonials = () => {
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5500/review')
+        .then(res => res.json())
+        .then(data => setReviews(data))
+    }, [])
     return (
-       <section className="testimonials mt-5 py-5 testimonials">
+       <section className="testimonials mt-5 py-5 ">
            <div className="container">
                <div className="section-header">
-                   <h5 className="text-primary text-uppercase">Testimonial</h5>
-                   <h1>What Our Patients <br/> Says </h1>
+                   <h5 className="text-primary text-uppercase">Reviews</h5>
+                   <h1>What is Your Quote for Us</h1>
                </div>
-               <div className="card-deck row mt-5">
+               <div className="d-flex justify-content-center">
+               <div className=" row mt-5">
                     {
-                        testimonialData.map(testimonial => <Testimonial testimonial={testimonial} key={testimonial.name}/>)
+                        reviews.map(testimonial => <Testimonial key={testimonial._id} testimonial={testimonial} />)
                     }
+                </div>
                 </div>
            </div>
        </section>
