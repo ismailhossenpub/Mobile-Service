@@ -39,7 +39,7 @@ const AllOrders = () => {
                   <tr className="line-draw">
                     <td>{orders.name}</td>
                     <td> 1 </td>
-                    <td>{orders.newInfo.phone}</td>
+                    <td>{orders.products.newInfo.phone}</td>
                     <td>{orders.email}</td>
                     <td>{orders.orderTime}</td>
                   </tr>
