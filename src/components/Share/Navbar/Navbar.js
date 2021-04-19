@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 
 const Navbar = () => {
-  
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
-      <h2>Mobile Service</h2>
+        <h2>Mobile Service</h2>
         <button
           className="navbar-toggler"
           type="button"
@@ -19,24 +18,35 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            
             <li className="nav-item">
-              <a className="nav-link ms-5 active" aria-current="page" href="/">Home</a>
+              <a className="nav-link ms-5 active" aria-current="page" href="/">
+                Home
+              </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link ms-5" href="#">About</a>
+              <a className="nav-link ms-5" href="#">
+                About
+              </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link ms-5" href="addReview">Dashboard</a>
-            </li>
-           <li className="nav-item">
-              <a className="nav-link ms-5 " href="admin">Admin</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link ms-5 " href="#">Blog</a>
+              <a className="nav-link ms-5" href="addReview">
+                Dashboard
+              </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link ms-5 " href="login">Login</a>
+              <a className="nav-link ms-5 " href="admin">
+                Admin
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link ms-5 " href="#">
+                Blog
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link ms-5 " href="login">
+                Login
+              </a>
             </li>
           </ul>
         </div>

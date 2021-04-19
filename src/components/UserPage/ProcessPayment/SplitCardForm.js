@@ -4,7 +4,7 @@ import {
   useElements,
   CardNumberElement,
   CardCvcElement,
-  CardExpiryElement
+  CardExpiryElement,
 } from "@stripe/react-stripe-js";
 
 const useOptions = () => {
@@ -12,19 +12,21 @@ const useOptions = () => {
     () => ({
       style: {
         base: {
-          fontSize:'16px',
+          fontSize: "16px",
           color: "#424770",
           letterSpacing: "0.025em",
           fontFamily: "Source Code Pro, monospace",
           "::placeholder": {
-            color: "#aab7c4"
-          }
+            color: "#aab7c4",
+          },
         },
         invalid: {
-          color: "#9e2146"
-        }
-      }
-    }),[]);
+          color: "#9e2146",
+        },
+      },
+    }),
+    []
+  );
 
   return options;
 };
@@ -34,7 +36,7 @@ const SplitCardForm = () => {
   const elements = useElements();
   const options = useOptions();
 
-  const handleSubmit = async event => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!stripe || !elements) {
@@ -45,7 +47,7 @@ const SplitCardForm = () => {
 
     const payload = await stripe.createPaymentMethod({
       type: "card",
-      card: elements.getElement(CardNumberElement)
+      card: elements.getElement(CardNumberElement),
     });
     console.log("[PaymentMethod]", payload);
   };
@@ -59,7 +61,7 @@ const SplitCardForm = () => {
           onReady={() => {
             console.log("CardNumberElement [ready]");
           }}
-          onChange={event => {
+          onChange={(event) => {
             console.log("CardNumberElement [change]", event);
           }}
           onBlur={() => {
@@ -70,7 +72,7 @@ const SplitCardForm = () => {
           }}
         />
       </label>
-      <br/>
+      <br />
       <label>
         Expiration date
         <CardExpiryElement
@@ -78,7 +80,7 @@ const SplitCardForm = () => {
           onReady={() => {
             console.log("CardNumberElement [ready]");
           }}
-          onChange={event => {
+          onChange={(event) => {
             console.log("CardNumberElement [change]", event);
           }}
           onBlur={() => {
@@ -89,7 +91,7 @@ const SplitCardForm = () => {
           }}
         />
       </label>
-      <br/>
+      <br />
       <label>
         CVC
         <CardCvcElement
@@ -97,7 +99,7 @@ const SplitCardForm = () => {
           onReady={() => {
             console.log("CardNumberElement [ready]");
           }}
-          onChange={event => {
+          onChange={(event) => {
             console.log("CardNumberElement [change]", event);
           }}
           onBlur={() => {
@@ -108,7 +110,7 @@ const SplitCardForm = () => {
           }}
         />
       </label>
-      <br/>
+      <br />
       <button type="submit" disabled={!stripe}>
         Pay
       </button>

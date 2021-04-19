@@ -46,40 +46,40 @@ const Login = () => {
         // Handle error
       });
   };
-console.log("Email=",loggedInUser.email);
+  console.log("Email=", loggedInUser.email);
   return (
     <section>
-      <div style={{backgroundColor:'#0fcfec'}}>
-          <Navbar></Navbar>
+      <div style={{ backgroundColor: "#0fcfec" }}>
+        <Navbar></Navbar>
       </div>
-      
-    <div className="login-page container">
-      <div className="row align-items-center" style={{ height: "100vh" }}>
-        <div className="col-md-6 shadow p-5">
-          <div className="form-group">
-            <label htmlFor="">User Name</label>
-            <input type="text" className="form-control" />
+
+      <div className="login-page container">
+        <div className="row align-items-center" style={{ height: "100vh" }}>
+          <div className="col-md-6 shadow p-5">
+            <div className="form-group">
+              <label htmlFor="">User Name</label>
+              <input type="text" className="form-control" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="">Password</label>
+              <input type="password" className="form-control" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="" className="text-danger">
+                Forgot your password?
+              </label>
+            </div>
+            <div className="from-group mt-5">
+              <button className="btn btn-success" onClick={handleGoogleSignIn}>
+                Google Sign in
+              </button>
+            </div>
           </div>
-          <div className="form-group">
-            <label htmlFor="">Password</label>
-            <input type="password" className="form-control" />
-          </div>
-          <div className="form-group">
-            <label htmlFor="" className="text-danger">
-              Forgot your password?
-            </label>
-          </div>
-          <div className="from-group mt-5">
-            <button className="btn btn-success" onClick={handleGoogleSignIn}>
-              Google Sign in
-            </button>
+          <div className="col-md-6 d-none d-md-block align-self-end mt-5">
+            <img className="img-fluid" src={LoginBg} alt="" />
           </div>
         </div>
-        <div className="col-md-6 d-none d-md-block align-self-end mt-5">
-          <img className="img-fluid" src={LoginBg} alt="" />
-        </div>
       </div>
-    </div>
     </section>
   );
 };

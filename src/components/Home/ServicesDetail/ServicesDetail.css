@@ -2,6 +2,12 @@
     transition: all ease .3s;
 }
 .service-p:hover{
- transform: scale(1.20);
+ transform: scale(1.40);
  transition: all ease .3s;
+}
+.service-body{
+    border-radius: 10px;
+}
+.service-body:hover{
+ box-shadow: 5px 5px 10px #ccc;
 }

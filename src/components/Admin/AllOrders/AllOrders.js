@@ -4,8 +4,8 @@ import AdminSidebar from "../../Share/AdminSidebar/AdminSidebar";
 import "./AllOrders.css";
 const containerStyle = {
   backgroundColor: "#F4FDFB",
-  height:"100%"
-}
+  height: "100%",
+};
 
 const AllOrders = () => {
   const [allOrder, setAllOrder] = useState([]);
@@ -18,39 +18,38 @@ const AllOrders = () => {
   }, []);
   return (
     <section>
-    <div style={containerStyle} className="container-fluid row">
+      <div style={containerStyle} className="container-fluid row">
         <div className="col-md-2">
-            <AdminSidebar></AdminSidebar>
+          <AdminSidebar></AdminSidebar>
         </div>
         <div className="col-md-10 d-flex justify-content-center">
-        <div className="order">
-      <table className="order-table">
-        <thead>
-          <tr className="line-draw">
-            <th scope="col">Name</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Phone</th>
-            <th scope="col">Email</th>
-            <th scope="col">Date and Time</th>
-          </tr>
-        </thead>
-        {allOrder.map((orders) => (
-          <tbody key={orders._id}>
-            <tr className="line-draw">
-              <td>{orders.name}</td>
-              <td> 1 </td>
-              <td>{orders.newInfo.phone}</td>
-              <td>{orders.email}</td>
-              <td>{orders.orderTime}</td>
-            </tr>
-          </tbody>
-        ))}
-      </table>
-    </div>
+          <div className="order">
+            <table className="order-table">
+              <thead>
+                <tr className="line-draw">
+                  <th scope="col">Name</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Date and Time</th>
+                </tr>
+              </thead>
+              {allOrder.map((orders) => (
+                <tbody key={orders._id}>
+                  <tr className="line-draw">
+                    <td>{orders.name}</td>
+                    <td> 1 </td>
+                    <td>{orders.newInfo.phone}</td>
+                    <td>{orders.email}</td>
+                    <td>{orders.orderTime}</td>
+                  </tr>
+                </tbody>
+              ))}
+            </table>
+          </div>
         </div>
-    </div>
-</section>
-    
+      </div>
+    </section>
   );
 };
 
