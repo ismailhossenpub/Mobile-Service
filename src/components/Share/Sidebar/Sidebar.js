@@ -5,7 +5,7 @@ import './Sidebar.css';
 const Sidebar = () => {
     return (
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{height:"100vh"}}>
-            <ul className="list-unstyled">
+            <ul className="list-unstyled ">
                 <li>
                     <Link to="/checkout/:serviceId" className="text-white">
                          <span>Book</span> 
@@ -23,7 +23,11 @@ const Sidebar = () => {
                 </li>
             </ul>
             <div>
-                <Link to="/" className="text-white"> <span>Logout</span></Link>
+                <ul className="list-unstyled ">
+                    <li>
+                    <Link to="/" className="text-white"> <span>Logout</span></Link>
+                    </li>
+                </ul>
             </div>
         </div>
     );

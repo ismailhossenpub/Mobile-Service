@@ -19,47 +19,49 @@ import Orders from "./components/UserPage/Orders/Orders";
 import ManageBook from "./components/Admin/ManageBook/ManageBook";
 import Admin from "./components/Admin/Admin/Admin";
 import AdminSidebar from "./components/Share/AdminSidebar/AdminSidebar";
+import AllOrders from "./components/Admin/AllOrders/AllOrders";
 
 export const UserContext = createContext();
 
 function App() {
-  
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
-        <Route path="/login">
+          <Route path="/login">
             <Login></Login>
           </Route>
-          <PrivateRoute path="/addService">
+          <Route path="/addService">
             <AddService></AddService>
-          </PrivateRoute>
-          <PrivateRoute path="/makeAdmin">
+          </Route>
+          <Route path="/allOrder">
+            <AllOrders></AllOrders>
+          </Route>
+          <Route path="/makeAdmin">
             <MakeAdmin></MakeAdmin>
-          </PrivateRoute>
+          </Route>
           <PrivateRoute path="/admin">
             <AdminSidebar></AdminSidebar>
           </PrivateRoute>
-          <PrivateRoute path="/manageBook">
+          <Route path="/manageBook">
             <ManageBook></ManageBook>
-          </PrivateRoute>
-          <PrivateRoute path="/addReview">
+          </Route>
+          <Route path="/addReview">
             <Review></Review>
-          </PrivateRoute>
-          <PrivateRoute path="/checkout">
+          </Route>
+          <PrivateRoute path="/checkout/:serviceId">
             <Checkout />
           </PrivateRoute>
-          <PrivateRoute path="/order">
+          <Route path="/order">
             <Orders />
-          </PrivateRoute>
+          </Route>
           <Route exact path="/">
             <Home />
           </Route>
-    
         </Switch>
       </Router>
-      </UserContext.Provider>
+    </UserContext.Provider>
   );
 }
 

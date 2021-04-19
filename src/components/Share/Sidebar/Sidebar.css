@@ -12,3 +12,10 @@
 .sidebar svg{
     margin-right: 5px;
 }
+.sidebar ul li a{
+ text-decoration: none;
+}
+.logout{
+    
+ text-decoration: none;
+}

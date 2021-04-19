@@ -5,6 +5,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import LoginBg from "../../../images/p4.png";
 import firebaseConfig from "./firebase.config";
 import { UserContext } from "../../../App";
+import Navbar from "../../Share/Navbar/Navbar";
 
 const Login = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -47,6 +48,11 @@ const Login = () => {
   };
 console.log("Email=",loggedInUser.email);
   return (
+    <section>
+      <div style={{backgroundColor:'#0fcfec'}}>
+          <Navbar></Navbar>
+      </div>
+      
     <div className="login-page container">
       <div className="row align-items-center" style={{ height: "100vh" }}>
         <div className="col-md-6 shadow p-5">
@@ -69,11 +75,12 @@ console.log("Email=",loggedInUser.email);
             </button>
           </div>
         </div>
-        <div className="col-md-6 d-none d-md-block align-self-end">
+        <div className="col-md-6 d-none d-md-block align-self-end mt-5">
           <img className="img-fluid" src={LoginBg} alt="" />
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

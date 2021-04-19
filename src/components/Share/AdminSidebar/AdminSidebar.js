@@ -30,12 +30,13 @@ console.log(loggedInUser.name);
                          <span>Admin Site</span> 
                     </Link>
                 </li>
-
-                {/* <li>
-                    <Link to="#" className="text-white">
-                         <span>Order List</span> 
+                {
+                    isAdmin && <div>
+                         <li>
+                    <Link to="allOrder" className="text-white">
+                         <span>All Order List</span> 
                     </Link>
-                </li> */}
+                </li>
                 <li>
                     <Link to="/addService" className="text-white">
                          <span>Add Service</span> 
@@ -51,9 +52,15 @@ console.log(loggedInUser.name);
                          <span>Manage Service</span>
                     </Link>
                 </li>
+                         </div>
+                } 
             </ul>
             <div>
-                <Link to="/" className="text-white"> <span>Logout</span></Link>
+                <ul className="list-unstyled ">
+                    <li>
+                    <Link to="/" className="text-white"> <span>Logout</span></Link>
+                    </li>
+                </ul>
             </div>
         </div>
     );
