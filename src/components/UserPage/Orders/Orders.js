@@ -31,7 +31,8 @@ const Orders = () => {
               <thead>
                 <tr className="line-draw">
                   <th scope="col">Name</th>
-                  <th scope="col">Quantity</th>
+                  <th scope="col">Payment Id</th>
+                  <th scope="col">Service Name</th>
                   <th scope="col">Price</th>
                   <th scope="col">Email</th>
                   <th scope="col">Date and Time</th>
@@ -41,8 +42,9 @@ const Orders = () => {
                 <tbody key={orders._id}>
                   <tr className="line-draw">
                     <td>{orders.name}</td>
-                    <td> 1 </td>
-                    <td>${orders.price}</td>
+                    <td>{orders.paymentId}</td>
+                    <td>{orders.products.name}</td>
+                    <td>${orders.products.price}</td>
                     <td>{orders.email}</td>
                     <td>{orders.orderTime}</td>
                   </tr>
